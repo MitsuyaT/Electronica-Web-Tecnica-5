@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*START HERO*/
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: url(../css/img/214329.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+/*START NAV*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8% 0 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 45px;
+}
+
+span {
+    color: rgb(255, 255, 0);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 19, 131);
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform 0.6s;
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(255, 0, 255);
+    transform: scale(1.1);
+}
+
+/*START INTRO*/
+
+#container-blur {
+    background-color: rgb(94, 0, 73);
+    width: 650px;
+    height: 225px;
+    border-radius: 6px;
+    box-shadow: 7px 12px rgb(24, 7, 26);
+    margin: 96px;
+}
+
+h3 {
+    font-size: 28px;
+    color: rgb(255, 255, 0);
+    border-radius: 6px;
+    background-color: black;
+    padding: 10px 0 5px 20px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    padding: 10px 0 0 22px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 20px;
+    color:  rgb(0, 255, 170);
+    padding: 10px 0 0 20px;
+}
+
+
+
+/*START SECTION*/
+
+#container-section {
+    background: rgb(41, 27, 59);
+    background: linear-gradient(0deg, rgba(41, 27, 59, 1) 39%, rgba(53, 34, 97, 1) 96%);
+}
+
+h2 {
+    color: azure;
+}
+
+p {
+    color: #3db5bc;
+}
