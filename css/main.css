@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Russo One', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*START HERO*/
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: url(../css/img/214329.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    padding-top:4.7em;
+}
+
+/*START NAV*/
+
+header {
+    position: fixed;                /*Fixeo el Nav*/ /*Estatico*/
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    background-color:black;
+    display: flex;
+    align-items: center;                      /*Estructuración del Nav*/
+    justify-content: space-between;
+    border-bottom: solid 1.5px rgba(255, 255, 255, 0.126);
+}
+
+.ultimoLi {
+    margin-right: 2em;
+}
+
+.logo , span {
+    font-family: 'Bruno Ace SC', cursive;
+}
+                                            /*Sección Logo Izquierdo del Nav*/
+.logo {
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding:0.05em;
+    margin:0.3em;
+}
+                                             
+span {
+    color: rgb(255, 255, 0);
+    font-size: 0.5em;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    transition: all .2s;
+    margin-top: 0.7em;
+    padding:0;   
+}
+
+nav ul li:hover {
+    transform: scale(1.35);     
+       
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    padding:0.2em 0;
+    margin:0.3em 0.7em;
+    transition: 0.1s;
+    position: relative;
+
+}
+nav ul li a:hover {
+    color: rgb(255, 255, 0);
+    background:linear-gradient(120deg red);
+}
+
+nav ul li a:after {
+    content:"";
+    width: 0;
+    height: 4px;
+    background-color: rgb(56, 149, 210);
+    position: absolute;
+    bottom: 0;
+    left:0%;
+    transition: all .18s;
+    will-change:width;
+    border-radius:5px;
+}
+nav ul li a:hover:after {
+    width: 100%;
+    right: 0;
+}
+
+            /*Fin del Nav PC*/ 
+            /*E inicio del Main*/
+
+
+
