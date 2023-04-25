@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -17,7 +18,7 @@ html {
 .hero {
     height: 100vh;
     width: 100%;
-    background: url(../css/img/214329.gif);
+    background: url(../css/img/214329.gif);         /*Acomodo de la imagen de fondo*/
     background-size: cover;
     background-position: center;
 }
@@ -52,13 +53,13 @@ nav {
                                             /*Sección Logo Izquierdo del Nav*/
 .logo {
     color: white;
-    font-size: 2.5em;
+    font-size: calc(2em + 1vw + .4vh);
     letter-spacing: 1px;
     cursor: pointer;
     padding:0.05em;
     margin:0.3em;
 }
-                                             
+                                             /*Electronica && N°5 -- Decoration*/
 span {
     color: rgb(255, 255, 0);
     font-size: 0.5em;
@@ -78,7 +79,7 @@ nav ul li:hover {
 }
 
 nav ul li a {
-    font-size: 1.5em;
+    font-size: calc(1em + .8vw);
     text-decoration: none;
     color: white;
     padding:0.2em 0;
@@ -96,7 +97,7 @@ nav ul li a:after {
     content:"";
     width: 0;
     height: 4px;
-    background-color: rgb(56, 149, 210);
+    background-color: rgb(56, 149, 210);            /*Animación Subrayado*/
     position: absolute;
     bottom: 0;
     left:0%;
@@ -112,5 +113,62 @@ nav ul li a:hover:after {
             /*Fin del Nav PC*/ 
             /*E inicio del Main*/
 
+.boxText {
+    display: flex;
+    width: 100%;
+    min-height:60vh;
+    text-align: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.boxA , .boxB {
+    display: inline-block;
+    background-color: rgb(72, 3, 58);
+    display:flex;
+    min-height:40%;
+    color: white;
+}
+
+h1 {
+    display: block;
+    color:rgb(255, 255, 0);
+    background-color: black;
+    text-align: start;
+    padding: .3em .3em .3em 0.5em;
+    border-radius: .3em;
+    letter-spacing: 1px;
+    font-size: calc(1em + 2vw)
+}
+
+.divP {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+ 
+}
+
+.boxA p {
+    font-size: calc(1em + 1.5vw );
+    margin: 1em 0 1em 0;
+}
+
+.boxA {
+    width: 40%;
+    flex-direction: column;
+    border-radius:.5em;
+}
 
 
+
+
+
+.boxB {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width:40%;
+    justify-content:center;  
+    display: none;
+}
