@@ -9,6 +9,7 @@
 }
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -116,7 +117,7 @@ nav ul li a:hover:after {
 .boxText {
     display: flex;
     width: 100%;
-    min-height:60vh;
+    height:60vmin;              /*ESTRUCTURACIÓN DE LAS 2 CAJAS*/
     text-align: center;
     align-items: center;
     padding: 1em;
@@ -124,18 +125,18 @@ nav ul li a:hover:after {
 
 .boxA , .boxB {
     display: inline-block;
-    background-color: rgb(72, 3, 58);
+    background-color: rgb(94, 0, 73);                 /*Modificación Directa a las cajas*/
     display:flex;
-    min-height:40%;
     color: white;
 }
 
 h1 {
+    user-select: none;
     display: block;
     color:rgb(255, 255, 0);
     background-color: black;
     text-align: start;
-    padding: .3em .3em .3em 0.5em;
+    padding: .3em .3em .3em 0.5em;                      /*De acá para abajo decoración y estructuración responsiva variada*/
     border-radius: .3em;
     letter-spacing: 1px;
     font-size: calc(1em + 2vw)
@@ -143,28 +144,30 @@ h1 {
 
 .divP {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+    margin: auto;
  
 }
 
 .boxA p {
-    font-size: calc(1em + 1.5vw );
-    margin: 1em 0 1em 0;
+    font-size: calc(1.7em + 2vw );
+    margin: .5em .2em .5em .2em;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+    user-select: none;
 }
 
 .boxA {
-    width: 40%;
+    min-width: 30%;
+    max-width: 75%;
     flex-direction: column;
     border-radius:.5em;
 }
 
 
-
-
-
-.boxB {
+.boxB  {
     justify-content: center;
     align-items: center;
     text-align: center;
