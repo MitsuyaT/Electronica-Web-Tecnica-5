@@ -10,7 +10,7 @@
 
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
+   
 }
 
 
@@ -22,10 +22,17 @@ html {
     background: url(../css/img/214329.gif);         /*Acomodo de la imagen de fondo*/
     background-size: cover;
     background-position: center;
+    
 }
 
+
+
 main {
-    padding-top:4.7em;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;  
+            /*Scroll Con Animación*/
+    height: 100vh;
 }
 
 /*START NAV*/
@@ -37,11 +44,11 @@ header {
 }
 
 nav {
-    background-color:black;
+  
     display: flex;
     align-items: center;                      /*Estructuración del Nav*/
     justify-content: space-between;
-    border-bottom: solid 1.5px rgba(255, 255, 255, 0.126);
+    
 }
 
 .ultimoLi {
@@ -53,7 +60,7 @@ nav {
 }
                                             /*Sección Logo Izquierdo del Nav*/
 .logo {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: calc(2em + 1vw + .4vh);
     letter-spacing: 1px;
     cursor: pointer;
@@ -117,7 +124,7 @@ nav ul li a:hover:after {
 .boxText {
     display: flex;
     width: 100%;
-    height:60vmin;              /*ESTRUCTURACIÓN DE LAS 2 CAJAS*/
+    height:80vmin;              /*ESTRUCTURACIÓN DE LAS 2 CAJAS*/
     text-align: center;
     align-items: center;
     padding: 1em;
@@ -134,7 +141,7 @@ h1 {
     user-select: none;
     display: block;
     color:rgb(255, 255, 0);
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     text-align: start;
     padding: .3em .3em .3em 0.5em;                      /*De acá para abajo decoración y estructuración responsiva variada*/
     border-radius: .3em;
@@ -175,3 +182,16 @@ h1 {
     justify-content:center;  
     display: none;
 }
+
+.cajagigante {
+    background-color: rgb(41, 134, 152);
+    height: 100vh;
+    width: 100%;
+}
+
+.hero, .cajagigante {
+    scroll-snap-align: start;
+    
+}
+
+
