@@ -21,3 +21,16 @@ btn.onclick = function() {
     }
 
 }
+
+//! Dark && Light Mode 
+
+let mode = document.querySelector("#mode");
+let sun = document.querySelector("#light");
+let moon = document.querySelector("#dark");
+let lightMode = document.querySelector("#body");
+
+mode.onclick = function() {
+    sun.classList.toggle("light");
+    moon.classList.toggle("dark");
+    lightMode.classList.toggle("LIGHT");
+}

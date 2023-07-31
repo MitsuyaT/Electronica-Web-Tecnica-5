@@ -11,7 +11,7 @@
 </head>
 
 
-<body class="body">
+<body class="body" id="body">
                     <!--* Side Bar Nav Start-->
     <header class="sideNavBar" id="#sidebar">
         <nav class="nav">
@@ -65,11 +65,14 @@
             <div class="bottom">
                <div class="darkMode">
 
-                <p class="modeText">Dark</p>
+                <p class="modeText">Dark
+                    <span style=""><p class="modeText light">Light</p></span>
+                </p>
+                
 
-                    <button class="mode">
-                        <img class="modeIcon" src="icons/moon.svg" alt=""></i>
-                        <img class="modeIcon light" src="icons/sun.svg" alt=""></i>
+                    <button class="mode" id="mode">
+                        <img class="modeIcon" src="icons/moon.svg" id="dark" alt=""></i>
+                        <img class="modeIcon light" id="light" src="icons/sun.svg" alt=""></i>
                     </button>
                     
                     

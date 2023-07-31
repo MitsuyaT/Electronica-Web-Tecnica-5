@@ -18,7 +18,11 @@
               }
 
 
-:root { 
+:root {   /*! MEASURES AND DARK MODE (DEFAULT)*/
+    --time-transition-mode:.2s;
+
+
+
     /*Nav*/
     --nav:calc(200px + 1vw);
     --nav-active:calc(100% - 100px);
@@ -26,8 +30,13 @@
 
     --nav-bg-color:rgb(7, 7, 7);        
         /*Top*/
-    --top-title-color:white;
+        
     --top-bg-color:rgba(56, 82, 82, 0.192);
+    --logo-color:white;    
+    --top-title-color:white;
+    --span-color:rgb(37, 182, 102);
+    --bar-color:white;
+    --border-top-color:transparent;
 
         /*Middle - Ul*/
     --icon-svg-color:#37c1f0;       
@@ -35,8 +44,45 @@
     --middle-text-color:rgb(255, 255, 255); 
     --middle-text-bg-color:#000000e8;
     --middle-bg-hover-color:rgba(19, 19, 20, 0.452);
+    --bottom-icon-color:rgba(120, 150, 231, 0.267);
+    
     --line-color:#37c1f0;   /*UI Line*/
+
         /*Buttom*/
+    --text-button-color:rgba(255, 255, 255, 0.671);
+    --button-bg-color:rgb(14, 13, 13);    
+
+}
+
+.body.LIGHT {   /*! LIGHT MODE */
+  --time-transition-mode:.2s;
+  
+
+
+          
+    --nav-bg-color:rgb(224, 232, 233); 
+    /*Top*/
+    --top-bg-color:rgb(98, 56, 165);
+    --logo-color:rgb(255, 255, 255);   
+    --top-title-color:rgb(255, 255, 255);
+    --span-color:rgb(255, 255, 0);
+    --bar-color:rgb(0, 0, 0);
+    --border-top-color:transparent;
+
+      /*Middle - Ul*/
+    --icon-svg-color:#a32b8f;       
+    --icon-svg-bg-color:#00000;         
+    --middle-text-color:rgb(0, 0, 0); 
+    --middle-text-bg-color:#b33e3ee8;
+    --middle-bg-hover-color:rgba(195, 195, 216, 0.452);
+    --bottom-icon-color:rgba(108, 72, 109, 0.363);
+
+    --line-color:#a32b8f;   /*UI Line*/
+      /*Buttom*/
+      
+    --text-button-color:rgba(0, 0, 0, 0.733);
+    --button-bg-color:rgb(234, 195, 241);
+ 
 }
 
 * {
@@ -65,8 +111,9 @@ html, .body {   width: 100%; height: 100%;
     gap: 7.5%;
         /*? <------------------------------------> */
     background-color: var(--nav-bg-color);
+    transition: background-color var(--time-transition-mode) ease;
     box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.295);
-    border-radius: 0 .75em .75em 0;
+    border-radius: 0 .5em .5em 0;
 }
 
 .topAndUlContainer {
@@ -86,6 +133,7 @@ html, .body {   width: 100%; height: 100%;
     align-items: center;
     justify-content: space-evenly;
     user-select: none;
+    border-radius: 0 .5em 0 0;
     padding: 1em 0 1em 0;
         /*? <------------------------------------> */
     background-color:var(--top-bg-color);
@@ -94,13 +142,16 @@ html, .body {   width: 100%; height: 100%;
 
     .top .simbolo {     /*Logo*/
         margin-right: 3%;
-        color: white;
         font-size: 2em;
+        color: var(--logo-color);
         transition: all .3s ease;
+        transition: color var(--time-transition-mode) ease;
+       
     }
     .top h2  {          /*E.E.S.T*/
             /*? <------------------------------------> */
         transition: all .1s ease;
+        transition: color var(--time-transition-mode) ease;
         font-size: 1.2em;
         font-family: 'Bruno Ace SC', cursive;
         letter-spacing: 2px;
@@ -112,7 +163,8 @@ html, .body {   width: 100%; height: 100%;
         filter: brightness(1.75);
         font-size: 0.75em;
         font-family: 'Bruno Ace SC', cursive;
-        color: rgb(37, 182, 102);
+        transition: color var(--time-transition-mode) ease;
+        color: var(--span-color);
     }
 
     .btn {
@@ -129,7 +181,7 @@ html, .body {   width: 100%; height: 100%;
         .btn .logo {
             width: 100%;
             height: 100%;
-            color:white;
+            color:var(--bar-color);
             font-size: 1.25em;
             border-radius: 5px;
             background-color:transparent;
@@ -155,9 +207,11 @@ html, .body {   width: 100%; height: 100%;
         gap: .75em;
             /*? <------------------------------------> */
         background-color:transparent;
+        
 }
     .li a { width: 100%;
             /** <------------------------------------> */
+        transition: color var(--time-transition-mode) ease;
         position: relative;
         display: flex;
         justify-content: start;
@@ -203,7 +257,7 @@ html, .body {   width: 100%; height: 100%;
         transition: font-size .4s ease;
                     /*? ------------------------------------ */
         font-size: 1.25em;
-        border-bottom: solid 1.5px rgba(120, 150, 231, 0.267);
+        border-bottom: solid 1.5px var(--bottom-icon-color);
         filter: blur(0.5px);
         color: var(--icon-svg-color);
         background-color:var(--icon-svg-bg-color);
@@ -255,8 +309,8 @@ html, .body {   width: 100%; height: 100%;
         min-height:4.5em;
         position: relative;
         border-radius: .5em;
-        background-color: rgb(31, 152, 173);
-        transition: 0.1s ease background-color;
+        background-color: var(--button-bg-color);
+        transition: ease var(--time-transition-mode);
         border: none;
         cursor: pointer;
       }
@@ -267,14 +321,11 @@ html, .body {   width: 100%; height: 100%;
             bottom: 0;
             top: 0;
             margin: auto;
-           
+            
             width: 4em;
           }
-          .mode:hover {
-            background-color: rgb(134, 21, 21);
-          }
-        
-              .modeIcon.light {
+
+              .modeIcon.light , .modeIcon.dark {
                 visibility: hidden;
               }
 
@@ -285,8 +336,12 @@ html, .body {   width: 100%; height: 100%;
         letter-spacing: 2px;
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
-        color: rgba(255, 255, 255, 0.671);
+        color:var(--text-button-color);
       }
+
+          .modeText.light , .modeText.dark{
+            display: none;
+          }
 
     /*! <------------------------------------>*/
 /* Estilos Activados al presionar la barra de navegación*/
