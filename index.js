@@ -28,9 +28,22 @@ let mode = document.querySelector("#mode");
 let sun = document.querySelector("#light");
 let moon = document.querySelector("#dark");
 let lightMode = document.querySelector("#body");
+let lol = document.querySelector("#arrowLight");
 
 mode.onclick = function() {
     sun.classList.toggle("light");
     moon.classList.toggle("dark");
     lightMode.classList.toggle("LIGHT");
+    lol.classList.toggle("white")
+}
+
+//! Slider 
+
+let slider = document.querySelector("#slider");
+let box = document.querySelector("#side");
+
+
+slider.onclick = function() {
+    box.classList.toggle("left");
+    slider.classList.toggle("left");
 }

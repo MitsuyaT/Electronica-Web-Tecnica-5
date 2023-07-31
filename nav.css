@@ -302,29 +302,29 @@ html, .body {   width: 100%; height: 100%;
       /*! MIDDLE ENDED*/
         /*! 3/3*/
     /*! BOTTOM START*/ /* Dark && Light Mode Fuaaa */
+    .slider{
+        display: none;
+    }
 
-    .bottom {
+    .bottom {   height: 35%;
       display: flex;
       justify-content: center;
       align-items: end;
-      background-color: transparent;
       margin-bottom: 7.5%;
-      height: 35%;
-      
+      background-color: transparent;
     }
 
-    .darkMode {
+    .darkMode {  width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      width: 100%;
+
       margin: 0 7.5% 0 7.5%;
       background-color: transparent;
     }
 
-      .mode { width:95%;
-        min-height:4.5em;
+      .mode { width:95%; min-height:4.5em;
         position: relative;
         border-radius: .5em;
         background-color: var(--button-bg-color);
@@ -332,17 +332,14 @@ html, .body {   width: 100%; height: 100%;
         border: none;
         cursor: pointer;
       }
-        .mode > .modeIcon {
+        .mode > .modeIcon { width: 4em;
             position: absolute;
             right: 0;
             left: 0;
             bottom: 0;
             top: 0;
             margin: auto;
-            
-            width: 4em;
           }
-
               .modeIcon.light , .modeIcon.dark {
                 visibility: hidden;
               }
@@ -350,9 +347,9 @@ html, .body {   width: 100%; height: 100%;
       .modeText {
         user-select: none;
         white-space: nowrap;
+        font-family: 'Times New Roman', Times, serif;
         font-size: 1.5em;
         letter-spacing: 2px;
-        font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         color:var(--text-button-color);
       }
@@ -383,8 +380,8 @@ html, .body {   width: 100%; height: 100%;
 
 .sideNavBar.active .listIcon {
     font-size: 1.5em;
-    transition: 0.1s ease-in;
     margin-left: -10px;
+    transition: 0.1s ease-in;
 } 
 
 
@@ -392,79 +389,111 @@ html, .body {   width: 100%; height: 100%;
     width: 80%;
 }
 
+/*! MOBILE MODE*/
 
 
 @media screen and (max-width:800px) {
+
     .body {
         --nav:100%;
         --main-inside:100%;
     }
-    .top {
+    .top, .modeText, .li a span  {
         display: none;
     }
-    .mainInside {
-        width: 100%;
+
+    .slider {
+        display: block;
     }
-    .nav {
-        gap: 0;
-        height:100%;
+
+    .mainInside {    width: 100%;
+       
+    }
+
+    .nav {          height:100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 0;
         border-radius:0;
     }
 
-    .sideNavBar {
-        height: 10%;
+    .sideNavBar {   height: 10%;
         bottom: 0;
         z-index: 100;
     }
 
-    .modeText {
-        display: none;
+    .mode {         width: 100%; min-height: 4.35em;
+        border-radius: 0.5em 0 0 0.5em;
     }
 
-    .mode {
-        width: 100%;
-        border-radius: 0;
-    }
+    .ul {               width: 90vw;
 
-    .ul {
         flex-direction: row;
-        width: 80vw;
         margin: 0 2.5vw 0 2.5vw;
         gap: 1vw;
         list-style: none;
     }
 
-    .bottom {
-    margin-bottom: 0;
-    width: 20%;
-    height: 100%;
-    display: block;
-    right: 0;
-    position: absolute;
-    top: -100%;
+    .bottom {           width: 4em; height: 100%;
+
+        display: block;
+        position: absolute;
+        right: -4.5em;
+        top: -800%;
+        margin-bottom: 0;
+        transition: all .25s ease;
+        border-radius: 0.5em 0 0 0.5em;
     }
+
+    .bottom.left {
+        right: 0;
+    }
+        
+
+    .slider {    width: 3em; height:4.35em;
+       
+        
+        display: block;
+        position: absolute;
+        z-index: -5;
+        right:-1em;
+        top: -800%;
+        z-index: 1000;
+        border: none;
+        background-color: transparent;
+        transition: all .25s ease;
+    }
+
+    .slider.left {
+        right:3.5em;
+    }
+
+        .arrow {    width:100%; height: 100%;
+        }
+
+        .arrow.white {  /*Su Modo Claro*/
+            filter: invert(.9);
+        }
+
+        
 
     .darkMode {
         margin: 0;
         display: block;
+        display: flex;
+        flex-direction: row;
+        
     }
     .modeIcon {
         font-size: .75em;
     }
 
-    .li  {
-        width:25%;
+    .li  {          width:25%
     }
     .li a {
         justify-content: center;
-    }
-
-    .li a span {
-        display: none;
     }
 
     .li a .listIcon {
@@ -473,12 +502,13 @@ html, .body {   width: 100%; height: 100%;
         border-bottom: none;
     }
 
+    .li:hover {
+        background-color: transparent;
+    }
+    
     .li:first-child a:after {
         height: 2px;
         width: 100%;
      }
-
-     .li:hover {
-        background-color: transparent;
-     }
+   
 }
