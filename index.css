@@ -1,268 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+/*! A TENER EN CUENTA:*/
+/*TODO: Si querés contribuir al codigo tenés que tener en cuenta:*/
 
-:root { 
-            /* ?Nav Variables*/
-    --nav-bg-color:rgb(7, 7, 7);        
-                /*Top*/
-    --top-bg-color:rgba(56, 82, 82, 0.192);
-    --top-title-color:white;
-
-                /*Middle - Ul*/
-    --icon-svg-color:#37c1f0;  /*Icon Color*/
-    --icon-svg-bg-color:#00000;    /*Icon BG Color*/
-
-    --middle-text-color:rgb(255, 255, 255); 
-    --middle-text-bg-color:#000000e8;
-    --middle-bg-hover-color:rgba(19, 19, 20, 0.452);
-    --line-color:#37c1f0;
-                /*UI Line*/
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Russo One', sans-serif;
-}
-
-html, .body {   width: 100%; height: 100%;
-}       /*Estructure*/
-
-    /* *Side Bar Nav Start*/
-
-.sideNavBar {       width: 20%; height: 100%;
-    position: fixed;
-    background-color: transparent;
-    transition: all 0.5s ease;
-}
-
-.nav {          width: 100%; height: 100%;
-        /* ?Estructure*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-start;
-    gap: 7.5%;
-        /* ?Style*/
-    background-color: var(--nav-bg-color);
-    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.295);
-    border-radius: 0 .75em .75em 0;
-}
-
-        /*Logo and First H2*/
-
-        /*! 1/3 TOP*/
-
-.top {          width: 100%; 
-        /* ?Estructure*/
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    user-select: none;
-    padding: 1em 0 1em 0;
-    border-bottom: solid 1px var(--border-top-color);
-
-        /* ?Style*/
-    background-color:var(--top-bg-color);
-}
-
-.top .simbolo /*Logo*/ {
-    margin-right: 3%;
-    color: white;
-    font-size: 2em;
-}
-.top h2 /*Electronica*/ {
-    /* ?Styles*/
-    font-size: 1.2em;
-    font-family: 'Bruno Ace SC', cursive;
-    letter-spacing: 2px;
-    color: var(--top-title-color);
-}
-
-.top .spanExtra {
-    filter: brightness(1.75);
-    font-size: 0.75em;
-    font-family: 'Bruno Ace SC', cursive;
-    color: rgb(37, 182, 102);
-    display: block;
-}
-
-.btn {
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
-    transition: 0.2s ease-out;
-    transition: background-color color 0.25s ease-in-out ;
-   
-    cursor: pointer;
-    background-color: transparent;
+    /*! Rojo = Separación de Secciones*/ /*Existen 3:
+    //Top = Corresponde al contenedor de los 3 elementos superiores;
+        //Icono del colegio; 
+        //Nombre del Colegio; 
+        //icono de barra;
+    //Middle = Ul y contenedor de los Li
+    //Bottom = Modo oscuro || Modo claro
     
+    /** Verde = Estructura*/    /** <-----------------> */
+    /*? Azul  =  Estilos*/      /*? <-----------------> */
+        /*o el color que sea para vos*/
+    /*Para entender esto, instalen la extensión ""Better Comments"*/
+    /*Claramente habrá excepciones, pero esta suele ser la forma en la que yo trabajo.*/
+
+
+.main { max-width: 100%;
 }
 
-.btn .logo {
-    width: 100%;
-    height: 100%;
-    color:white;
-    font-size: 1.25em;
-    border-radius: 5px;
-    background-color:rgba(29, 42, 44, 0.993);
-}
-
-    /*! TOP ENDED*/
-    /*! MIDDLE OR UL START 2/3*/
-
-        /*Four Nav Url*/
-.ul {
-        /* ?Estructure*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.li {   width: 90%;
-            /* ?Estructure*/
-        border-radius: 5px;
-        gap: .5em;
-            /*? Styles*/
-        background-color: var(--middle-text-bg-color);
-        border: solid 1px rgba(58, 56, 56, 0.377);
-}
-    .li a {
-            /* ?Estructure*/
-        position: relative;
-        display: flex;
-        justify-content: start;
-        align-items: end; 
-        user-select: none;
-        gap: 1em; 
-        padding:2.5% 0 2.5% 0; 
-        width: 100%;
-        white-space: nowrap;
-        
-            /* ?Styles*/
-        color: var(--middle-text-color);
-        font-size: 1.25em;
-        text-decoration: none;
-        letter-spacing: 1px;
-        font-weight:200;
-        filter: saturate(2);
-}
-
-    .li:first-child a:after {   width:calc(1px + 0.3vw); height:95%;    /*Delete first child*/
-        content: '';
-        position: absolute;
-        bottom:2.5%;   /*-100% to 2.5% for make this visible*/
-        right: 0.75%;
-        border-radius: 1.5px;
-        background-color:var(--line-color) ;
-        filter: blur(.5px);
-        animation: cosito .4s ease;
-
-
-    }
-    /*
-        @keyframes cosito {
-            0% {
-                bottom: -100%;
-            }
-            100% {
-                bottom: 2.5%;
-            }
-        }
-    */  /* *To modify in javascript*/    
-
-    .li a .listIcon /*Four Icons*/ {   
-        /* ?Estructure*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius:1px;
-        padding: 5px;
-        width: 30px;
-        margin-left: 2.5%;
-        transition: font-size .4s ease;
-        /* ?Styles*/
-        border-bottom: solid 1.5px rgba(120, 150, 231, 0.267);
-        filter: blur(0.5px);
-        color: var(--icon-svg-color);
-        background-color:var(--icon-svg-bg-color);
-        
-}
-
-    .li:hover {
-        background-color: var(--middle-bg-hover-color);
-    }
-
-
-/*! TOGGLE TO ACTIVE ON JAVASCRIPT */
-
-
-.sideNavBar.active {
-    width: 100px;
-}
-
-.sideNavBar.active .logo {
-  font-size:1.5em;
-}
-
-.simbolo.active , .top h2.active{
-    display: none;
-    opacity: 0;
-}
-
-.sideNavBar.active .li a , .sideNavBar.active .li a i {
-    justify-content: center;
-}
-
-
-.sideNavBar.active .listIcon {
-    font-size: 1.5em;
-    transition: 0.1s ease-in;
-} 
-
-.sideNavBar.active .aList {
-    display: none;
-}
-
-.sideNavBar.active .li a .listIcon {
-    width: 80%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.main {
-    max-width: 100%;
-}
-
-.hero {
-    height: 100vh;
-    width: 100%;
+.hero { height: 100vh;   width: 100%;
     background: url(img/Background-Image.gif);         /*Acomodo de la imagen de fondo*/
     background-size: cover;
     background-position: center;
 }
 
+/*
+.mainInside {       height: 100%;
+    
+    width: var(--main-inside);
+    position: absolute;
+    right:0;
+    transition: all 0.4s ease;
+}
+
+.mainInside.active {
+    width: var(--nav-active);
+}
+
+.h1 {
+    font-size: calc(2.5em + 3.5vw);
+    padding-top: 7.5px;
+    text-align: center;
+    font-family: Pixel;
+    color: white;
+    letter-spacing: 5px;
+    user-select: none;
+}
+
+.robotContainer {   width: 100%;    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.uno {              min-width: 30%; max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    background-color: black;
+}
+*/
