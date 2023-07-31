@@ -85,103 +85,98 @@
 
 
 .inicio {   width: 100%;    height:88.5vh;
-    background-color: rgba(43, 38, 38, 0.315);
+    /** <-----------------> */
     display: flex;
     justify-content: center;
     align-items: center;
+    /*? <-----------------> */
+    background-color: rgba(43, 38, 38, 0.315);
 }
 
-.robot {
+.robot {    width:calc(400px + 10vw); height: calc(250px + 5vw); /**Tamaño DE TODO el robot*/
+    /** <-----------------> */
     border: solid 0.5em black;
-    width:calc(400px + 10vw) ;
-    height: calc(250px + 5vw);
+    position: relative;  
+    /*? <-----------------> */  
     background-color: rgb(255, 255, 255);
-    position: relative;
 }
 
-.antenaContainer {
-    width: 100%;
-  
-    height: 25%;
+.antenaContainer {      width: 100%; height: 25%;
+    /** <-----------------> */
     display: flex;
     justify-content: center;
     align-items: start;
     gap: 33%;
 }
 
-.antenaUno, .antenaDos {
-    width: 10%;
-    height:100%;
+.antenaUno, .antenaDos {  width: 10%; height:100%;
+    position: relative;
     background-color: transparent;
+}
+    .antenaUno::after, .antenaDos::after {
+        position: absolute;
+        content: '';
+        width: 60%;
+        top: -155%;
+        height: 150%;
+        z-index:0;
+        /*? <-----------------> */
+        transform: rotate(-10deg);
+        background-color: rgb(0, 0, 0);
+    }
+    .antenaDos::after {
+        right: 0;
+        transform: rotate(10deg);
+    }
+
+
+
+.earLeft, .earRight { width: 40px; height: 7em;
+    /** <-----------------> */
     position: relative;
-}
-.antenaUno::after, .antenaDos::after {
-    position: absolute;
-    content: '';
-    width: 60%;
-    top: -155%;
-    height: 150%;
-    background-color: rgb(0, 0, 0);
-    transform: rotate(-10deg);
-    z-index:0;
-}
-.antenaDos::after {
-    right: 0;
-    transform: rotate(10deg);
-    
-}
-
-
-
-.earLeft, .earRight {
-    width: 40px;
-    height: 7em;
-    background-color: rgb(255, 255, 255);
     border: solid 0.25em black;
-    position: relative;
+    /*? <-----------------> */
+    background-color: rgb(255, 255, 255);
    
 }
-.earRight {
-    border-left: none;
-}
+    .earRight {
+        border-left: none;
+    }
 
-.earLeft {
-    border-right:none;
-}
+    .earLeft {
+        border-right:none;
+    }
 
-.earLeft::after, .earRight::after {
+.earLeft::after, .earRight::after { width:25%; height: 100%;
+    /** <-----------------> */
     content: '';
+    position: absolute;
     top: -104%;
- 
-    width:25%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
+    /*? <-----------------> */
     box-shadow: 0 -10px white;
+    background-color: rgb(0, 0, 0);
 }
-.earRight::after {
-    right: 0;
-}
+    .earRight::after {
+        right: 0;
+    }
 
-.robotFace {
+.robotFace {    width: 90%; height: 90%;
+    /** <-----------------> */
     position: absolute;
-    width: 90%;
-    height: 90%;
     right: 5%;
     top: 5%;
-    background-color: rgb(255, 255, 255);
+    /*? <-----------------> */
     border: solid 0.4em black;
+    background-color: rgb(255, 255, 255);
 }
 
 .face {
-   
+    /** <-----------------> */
     justify-content: center;
     align-items: start;
     position: absolute;
     top: 0;
     left: 0;
-    
-
 }
 /*
 
