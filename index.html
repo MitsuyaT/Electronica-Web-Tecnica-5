@@ -1,32 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Electronica</title>
 </head>
 
-<body>
-    <header>
-        <div class="hero">
-            <nav>
-                <h2 class="logo">Electronica<span>_5</span></h2>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="proyectos/index.html">PROJECTS</a></li>
-                    <li><a href="#">FORUM</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                </ul>
-            </nav>
-            <section id="section">
-                <div id="container-blur" class="filter">
-                    <h3>Bienvenidos</h3>
-                    <h1>Taller de Electronica Tecnica N°5</h1>
-                    <h4>Encontraras los proyectos mas interesantes de la Electronica </h4>
+
+<body class="body" id="body">
+                    <!--* Side Bar Nav Start-->
+    <header class="sideNavBar" id="#sidebar">
+        <nav class="nav">
+            <div class="topAndUlContainer">
+                <div class="top">
+                    <i class="bi bi-robot simbolo" id="icon"></i>
+                    <h2 class="" id="topH2">E.E.S.T<span class="spanExtra">「N_5」</span></h2>
+                    <button class="btn" id="btn">
+                        <i class="bi bi-list simbolo logo"></i>  
+                    </button>
                 </div>
-            </section>
-        </div>
+    
+               
+    
+                <ul class="ul">
+                    <li class="li"> <!--Home-->
+                        
+                        <a href="#">
+                            <i class="bi bi-house-door simbolo listIcon"></i>
+                            <span class="aList" id="list">Home</span>
+                        </a>
+                    </li>
+    
+                    <li class="li"> <!--Projects-->
+                        
+                        <a href="#">
+                            <i class="bi bi-border-all simbolo listIcon"></i>
+                            <span class="aList" id="list">Projects</span>
+                            
+                        </a>
+                    </li>
+    
+                    <li class="li"> <!--Forum-->
+                        <a href="#">
+                            <i class="bi bi-chat-left-text simbolo listIcon"></i>
+                            <span class="aList" id="list">Forum</span>
+                            
+                        </a>
+                    </li>
+    
+                    <li class="li"> <!--About Us-->
+                        <a href="#">
+                            <i class="bi bi-people simbolo listIcon"></i>
+                            <span class="aList" id="list">About Us</span>
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <button class="slider" id="slider">
+                <img class="arrow" id="arrowLight" src="icons/arrow.svg" alt="">
+            </button>
+            <div class="bottom" id="side">
+               <div class="darkMode">
+
+                <p class="modeText">Dark
+                    <span style=""><p class="modeText light">Light</p></span>
+                </p>
+                
+                    
+
+                    <button class="mode" id="mode">
+                        <img class="modeIcon" src="icons/moon.svg" id="dark" alt=""></i>
+                        <img class="modeIcon light" id="light" src="icons/sun.svg" alt=""></i>
+                    </button>
+                    
+                    
+               </div>
+            </div>
+        </nav>
     </header>
 
+
+
+
+
+
+
+    <main class="main">
+        <div class="hero">  <!--Background Image-->
+            <div class="mainInside" id="">
+                
+                <h1 class="h1"> ELECTRONICA</h1>
+                <section class="inicio">
+
+                <div class="earLeft"></div>
+
+                <div class="robot">
+                    <div class="antenaContainer">
+                        <div class="antenaUno"></div>
+                        <div class="antenaDos"></div>
+                    </div>
+                    <div class="robotFace">
+                        <div class="face">
+                            <div class="pixelart-to-css"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="earRight"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--
+                   <div class="robotContainer">
+                    <div class="earLeft"></div>
+                        <div class="robot">
+                            <div class="eyeLeft"></div>
+                            <div class="eyeRight"></div>
+                            <div class="mouth"></div>
+                        </div>
+                     <div class="earRight"></div>
+                   </div>
+                   -->
+                </section>
+                <section style="height: 100vh;"></section>
+                
+            </div>
+        </div>
+    </main>
+
 </body>
+
+<script src="index.js"></script>
+    
+</html>
